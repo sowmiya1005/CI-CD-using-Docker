@@ -34,8 +34,8 @@ pipeline {
   stage('Publish image to Docker Hub') {
           
             steps {
-          sh  'docker push nikhilnidhi/samplewebapp:latest'
-          sh  'docker push nikhilnidhi/samplewebapp:$BUILD_NUMBER' 
+          sh  'docker push localhost:5000/samplewebapp:latest'
+          sh  'docker push localhost:5000/samplewebapp:$BUILD_NUMBER' 
         
                   
           }
